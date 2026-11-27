@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARLOS / MÚSICA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="linear-gallery">
+    <section id="node-container" class="content-grid" aria-label="Linear image gallery with connections">
+    </section>
+    
+    <svg class="connections-svg" aria-hidden="true" focusable="false"></svg>
+    
+    <div class="loading-indicator" aria-hidden="true">
+      <span class="loading-text">Loading gallery...</span>
+    </div>
+  </main>
+  
+  <footer class="page-footer">
+    <p class="footer-text">Montevideo 2026</p>
+    <a href="https://www.peyoteasesino.com/" target="_blank" rel="noopener noreferrer" class="footer-link">El Peyote Asesino</a>
+  </footer>
+  
+  <script>
+    window.galleryConfig = {
+      nodes: [
+        { type: 'text', content: 'Carlos Casacuberta', id: 'n0' },
+        { type: 'text', content: 'Bio',                id: 'n1', link: 'bio.html' },
+        // Hidden for now (restore this node, its connection and its layout entry together):
+        // { type: 'text', content: 'Proyectos',          id: 'n2' },
+        { type: 'text', content: 'Álbumes',            id: 'n3', link: 'albumes.html' }
+      ],
+      connections: [
+        { from: 'n0', to: 'n1', fromAnchor: 'bottom', toAnchor: 'top-left' },
+        // { from: 'n0', to: 'n2', fromAnchor: 'bottom', toAnchor: 'top-right' },
+        { from: 'n0', to: 'n3', fromAnchor: 'bottom', toAnchor: 'top-left' }
+      ],
+      layout: [
+        { row: 1, col: 3, alignSelf: 'flex-end' },
+        { row: 2, col: 1, alignSelf: 'flex-start' },
+        // { row: 3, col: 3, alignSelf: 'flex-end' },   // Proyectos
+        { row: 3, col: 2, alignSelf: 'center' }
+      ]
+    };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

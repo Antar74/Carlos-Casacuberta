@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARLOS / ÁLBUMES</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1 class="site-title">Carlos Casacuberta / Álbumes</h1>
+    <nav class="header-nav">
+      <a href="inicio.html" class="nav-link" id="nav-inicio">Inicio</a>
+    </nav>
+  </header>
+  <main class="linear-gallery">
+    <section id="node-container" class="content-grid" aria-label="Linear image gallery with connections">
+    </section>
+    
+    <svg class="connections-svg" aria-hidden="true" focusable="false"></svg>
+    
+    <div class="loading-indicator" aria-hidden="true">
+      <span class="loading-text">Loading gallery...</span>
+    </div>
+  </main>
+  
+  <footer class="page-footer">
+    <p class="footer-text">Montevideo 2026</p>
+    <a href="https://www.peyoteasesino.com/" target="_blank" rel="noopener noreferrer" class="footer-link">El Peyote Asesino</a>
+  </footer>
+  
+  <script>
+    window.galleryConfig = {
+      nodes: [
+        { type: 'text',   content: 'Interbalnearia (2026)', id: 'node-0', link: 'album.html?id=interbalnearia' },
+        { type: 'image',  src: './images/carlos-interbalnearia.png',  alt: 'Interbalnearia (2026)', id: 'node-1', link: 'album.html?id=interbalnearia' },
+        { type: 'image',  src: './images/carlos-naturaleza.png',  alt: 'Naturaleza (2013)', id: 'node-2', link: 'album.html?id=naturaleza' },
+        { type: 'text',   content: 'Naturaleza (2013)',  id: 'node-3', link: 'album.html?id=naturaleza' },
+        { type: 'text',   content: ':Carlos (2006)',     id: 'node-4', link: 'album.html?id=carlos' },
+        { type: 'image',  src: './images/carlos-carlos.png',  alt: ':Carlos (2006)', id: 'node-5', link: 'album.html?id=carlos' }
+      ],
+      connections: [
+        { from: 'nav-inicio', to: 'node-0', fromAnchor: 'right', toAnchor: 'left' },
+        { from: 'node-0', to: 'node-1', fromAnchor: 'right', toAnchor: 'left' },
+        { from: 'node-1', to: 'node-2', fromAnchor: 'left', toAnchor: 'top' },
+        { from: 'node-2', to: 'node-3', fromAnchor: 'right', toAnchor: 'left' },
+        { from: 'node-3', to: 'node-4', fromAnchor: 'bottom', toAnchor: 'top' },
+        { from: 'node-4', to: 'node-5', fromAnchor: 'right', toAnchor: 'left' }
+      ],
+      layout: [
+        { row: 1, col: 1, alignSelf: 'flex-start' },
+        { row: 1, col: 2, alignSelf: 'center' },
+        { row: 2, col: 1, alignSelf: 'flex-start' },
+        { row: 2, col: 2, alignSelf: 'center' },
+        { row: 3, col: 2, alignSelf: 'center' },
+        { row: 3, col: 3, alignSelf: 'flex-end' }
+      ]
+    };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

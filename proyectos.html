@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos Casacuberta / Proyectos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1 class="site-title">Carlos Casacuberta / Proyectos</h1>
+    <nav class="header-nav">
+      <a href="inicio.html" class="nav-link" id="nav-inicio">Inicio</a>
+    </nav>
+  </header>
+  <main class="linear-gallery">
+    <section id="node-container" class="content-grid" aria-label="Linear image gallery with connections">
+    </section>
+    
+    <svg class="connections-svg" aria-hidden="true" focusable="false"></svg>
+    
+    <div class="loading-indicator" aria-hidden="true">
+      <span class="loading-text">Loading gallery...</span>
+    </div>
+  </main>
+  
+  <footer class="page-footer">
+    <p class="footer-text">Montevideo 2026</p>
+    <a href="https://www.peyoteasesino.com/" target="_blank" rel="noopener noreferrer" class="footer-link">El Peyote Asesino</a>
+  </footer>
+  
+  <script>
+    window.galleryConfig = {
+      nodes: [
+        { type: 'mixed', text: 'Campo de Espigas\nCarlos Casacuberta / Ana Prada\n2026', textPosition: 'top', id: 'node-0' },
+        { type: 'embed', embedType: 'bandcamp', trackId: 1118379649, id: 'node-1' },
+        { type: 'text',   content: '2024',     id: 'node-2' },
+        { type: 'text',   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tellus felis, interdum sed gravida vitae, suscipit at felis. Curabitur ut justo dolor. Aenean vel lectus arcu. Phasellus tincidunt rutrum nisi, in rutrum lorem eleifend quis. Donec eget arcu id nunc vulputate interdum id in ex. Suspendisse potenti. Mauris id erat sit amet velit gravida viverra pulvinar eu diam. Sed nunc odio, dapibus vel maximus ac, rutrum in tellus. Praesent viverra massa leo, a laoreet nunc finibus et. Suspendisse ligula tortor, euismod et tincidunt at, gravida a sem. Integer a volutpat augue, eu eleifend odio.', id: 'node-3' },
+        { type: 'text',   content: '2022',     id: 'node-4' },
+        { type: 'text',   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tellus felis, interdum sed gravida vitae, suscipit at felis. Curabitur ut justo dolor. Aenean vel lectus arcu. Phasellus tincidunt rutrum nisi, in rutrum lorem eleifend quis. Donec eget arcu id nunc vulputate interdum id in ex. Suspendisse potenti. Mauris id erat sit amet velit gravida viverra pulvinar eu diam. Sed nunc odio, dapibus vel maximus ac, rutrum in tellus. Praesent viverra massa leo, a laoreet nunc finibus et. Suspendisse ligula tortor, euismod et tincidunt at, gravida a sem. Integer a volutpat augue, eu eleifend odio.', id: 'node-5' }
+      ],
+      connections: [
+        { from: 'nav-inicio', to: 'node-0', fromAnchor: 'right', toAnchor: 'left' },
+        { from: 'node-0', to: 'node-1', fromAnchor: 'right', toAnchor: 'left' },
+        { from: 'node-0', to: 'node-2', fromAnchor: 'bottom', toAnchor: 'top' },
+        { from: 'node-2', to: 'node-3', fromAnchor: 'right', toAnchor: 'left' },
+        { from: 'node-2', to: 'node-4', fromAnchor: 'bottom', toAnchor: 'top' },
+        { from: 'node-4', to: 'node-5', fromAnchor: 'right', toAnchor: 'left' }
+      ],
+      layout: [
+        { row: 1, col: 1, alignSelf: 'center' },
+        { row: 1, col: 2, alignSelf: 'center' },
+        { row: 2, col: 1, alignSelf: 'flex-start' },
+        { row: 2, col: 2, alignSelf: 'center' },
+        { row: 3, col: 2, alignSelf: 'center' },
+        { row: 3, col: 3, alignSelf: 'flex-end' }
+      ]
+    };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

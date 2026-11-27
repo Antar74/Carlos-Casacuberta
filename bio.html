@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARLOS / BIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bio-page">
+  <header class="page-header">
+    <h1 class="site-title">Carlos Casacuberta / Bio</h1>
+    <nav class="header-nav">
+      <a href="inicio.html" class="nav-link" id="nav-inicio">Inicio</a>
+    </nav>
+  </header>
+
+  <main class="bio-main">
+    <svg class="bio-lines" aria-hidden="true" focusable="false"></svg>
+    <article class="bio-column" aria-label="Biografía y CV de Carlos Casacuberta">
+
+      <section class="bio-section bio-download">
+        <a class="bio-node bio-node-link" id="bio-download" href="downloads/carlos-casacuberta-bio-cv.pdf" download>
+          Descargar bio y CV completos (PDF)
+        </a>
+      </section>
+
+      <section class="bio-section" id="biografia">
+        <h2 class="bio-node bio-subtitle" id="bio-title">Biografía</h2>
+        <figure class="bio-figure">
+          <img src="./images/carlos-retrato.png" alt="Carlos Casacuberta, retrato" loading="lazy" decoding="async">
+          <figcaption>Carlos Casacuberta. Foto: Lorem Ipsum.</figcaption>
+        </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tellus felis, interdum sed gravida vitae, suscipit at felis. Curabitur ut justo dolor. Aenean vel lectus arcu. Phasellus tincidunt rutrum nisi, in rutrum lorem eleifend quis. Donec eget arcu id nunc vulputate interdum id in ex.</p>
+        <p>Suspendisse potenti. Mauris id erat sit amet velit gravida viverra pulvinar eu diam. Sed nunc odio, dapibus vel maximus ac, rutrum in tellus. Praesent viverra massa leo, a laoreet nunc finibus et. Suspendisse ligula tortor, euismod et tincidunt at, gravida a sem.</p>
+      </section>
+
+      <section class="bio-section" id="trayectoria">
+        <h2 class="bio-node bio-subtitle">Trayectoria</h2>
+        <p>Integer a volutpat augue, eu eleifend odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Cras sed lacus vitae massa tristique tincidunt. Morbi vehicula, nisl at feugiat pharetra, purus massa dignissim lorem.</p>
+        <ul class="cv-list">
+          <li><span class="cv-year">2026</span><span class="cv-entry">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></li>
+          <li><span class="cv-year">2024</span><span class="cv-entry">Pellentesque tellus felis, interdum sed gravida vitae.</span></li>
+          <li><span class="cv-year">2022</span><span class="cv-entry">Curabitur ut justo dolor, aenean vel lectus arcu.</span></li>
+          <li><span class="cv-year">2013</span><span class="cv-entry">Phasellus tincidunt rutrum nisi, in rutrum lorem eleifend quis.</span></li>
+        </ul>
+      </section>
+
+      <section class="bio-section" id="discografia">
+        <h2 class="bio-node bio-subtitle">Discografía</h2>
+        <figure class="bio-figure bio-figure-small">
+          <a href="album.html?id=interbalnearia">
+            <img src="./images/carlos-interbalnearia.png" alt="Tapa de Interbalnearia (2026)" loading="lazy" decoding="async">
+          </a>
+          <figcaption>Interbalnearia (2026)</figcaption>
+        </figure>
+        <ul class="cv-list">
+          <li><span class="cv-year">2026</span><span class="cv-entry"><a href="album.html?id=interbalnearia">Interbalnearia</a></span></li>
+          <li><span class="cv-year">2013</span><span class="cv-entry"><a href="album.html?id=naturaleza">Naturaleza</a></span></li>
+          <li><span class="cv-year">2006</span><span class="cv-entry"><a href="album.html?id=carlos">:Carlos</a></span></li>
+        </ul>
+      </section>
+
+      <!-- Hidden for now: remove the `hidden` attribute to show it again -->
+      <section class="bio-section" id="otros-proyectos" hidden>
+        <h2 class="bio-node bio-subtitle">Otros proyectos</h2>
+        <p>Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.</p>
+        <p>Más información en <a href="proyectos.html">Proyectos</a> y en el sitio de <a href="https://www.peyoteasesino.com/" target="_blank" rel="noopener noreferrer">El Peyote Asesino</a>.</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="page-footer">
+    <p class="footer-text">Montevideo 2026</p>
+    <a href="https://www.peyoteasesino.com/" target="_blank" rel="noopener noreferrer" class="footer-link">El Peyote Asesino</a>
+  </footer>
+
+  <script src="bio.js"></script>
+</body>
+</html>
